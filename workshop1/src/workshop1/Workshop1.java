@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author FPT
  */
-public class workshop1 {
+public class Workshop1 {
 
     /**
      * @param args the command line arguments
