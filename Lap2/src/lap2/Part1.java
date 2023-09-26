@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author FPT
  */
-public class Lap2 {
+public class Part1 {
 
     /**
      * @param args the command line arguments
