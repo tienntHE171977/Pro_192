@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package slot7;
 
 import java.util.Scanner;
 
-/**
- *
- * @author FPT
- */
+
 public class main1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -37,22 +30,23 @@ public class main1 {
 
         switch (choice) {
             case 1:
-                // Test toString()
+                
                 System.out.println("OUTPUT:");
                 System.out.println();
                 System.out.println(robot.toString());
                 System.out.println(specRobot.toString());
                 break;
             case 2:
-                // Test setData()
-                specRobot.setData(step);
-                System.out.println("Label after setData: " + specRobot.getLabel());
+                System.out.println("OUTPUT:");
+                System.out.println();
+                specRobot.setData();
+                System.out.println(specRobot.getLabel());
                 break;
             case 3:
-                // Test getValue()
-                int value = specRobot.getValue(step);
+                
+                int value = specRobot.getValue();
                 System.out.println("OUTPUT:");
-                System.out.println("Value: " + value);
+                System.out.println(value);
                 break;
             default:
                 System.out.println("Invalid choice.");

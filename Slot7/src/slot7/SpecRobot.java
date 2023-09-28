@@ -19,15 +19,18 @@ public class SpecRobot extends Robot{
         this.step = step;
     }
 
-    public void setData(int step) {
+    public void setData() {
+        
         if(super.getLabel().length()>= 2){
             String t1 = super.getLabel().substring(0, 1);
             String t2 = super.getLabel().substring(1);
             super.setLabel(t1 + step + t2);
+            super.getType(step);
         }
     }
 
-    public int getValue(int step) {
+    public int getValue() {
+        
         if(getType() < 3 && getLabel().contains("A")){
             return step;
         }else{
