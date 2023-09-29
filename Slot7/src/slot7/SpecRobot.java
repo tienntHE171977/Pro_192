@@ -25,8 +25,9 @@ public class SpecRobot extends Robot{
             String t1 = super.getLabel().substring(0, 1);
             String t2 = super.getLabel().substring(1);
             super.setLabel(t1 + step + t2);
-            super.getType(step);
+            
         }
+        
     }
 
     public int getValue() {

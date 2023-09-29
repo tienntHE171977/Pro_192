@@ -40,7 +40,7 @@ public class main1 {
                 System.out.println("OUTPUT:");
                 System.out.println();
                 specRobot.setData();
-                System.out.println(specRobot.getLabel());
+                System.out.println(specRobot.getLabel() + "," + specRobot.getType());
                 break;
             case 3:
                 
