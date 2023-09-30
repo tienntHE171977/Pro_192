@@ -1,3 +1,5 @@
+package slot7;
+
 import java.util.Scanner;
 
 public class Engine {
@@ -38,32 +40,34 @@ public class Engine {
     }
 
    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter designer: ");
-        String designer = scanner.nextLine();
+        String designer = sc.next();
         System.out.print("Enter power: ");
-        int power = scanner.nextInt();
+        int power = sc.nextInt();
 
         Engine engine = new Engine(designer, power);
 
         System.out.println("1. Test getDesigner()");
         System.out.println("2. Test setPower()");
         System.out.print("Enter TC (1 or 2): ");
-        int testCase = scanner.nextInt();
+        int testCase = sc.nextInt();
 
-        if (testCase == 1) {
-            System.out.println("OUTPUT:");
-            System.out.println(engine.getDesigner());
-        } else if (testCase == 2) {
-            System.out.print("Enter new power: ");
-            int newPower = scanner.nextInt();
-            engine.setPower(newPower);
-            System.out.println("OUTPUT:");
-            System.out.println(engine.getPower());
-        } else {
-            System.out.println("Invalid test case.");
+        switch (testCase) {
+            case 1:
+                System.out.println("OUTPUT:");
+                System.out.println(engine.getDesigner());
+                break;
+            case 2:
+                System.out.print("Enter new power: ");
+                int newPower = sc.nextInt();
+                engine.setPower(newPower);
+                System.out.println("OUTPUT:");
+                System.out.println(engine.getPower());
+                break;
+            default:
+                System.out.println("Invalid test case.");
+                break;
         }
-
-        scanner.close();
     }
 }
