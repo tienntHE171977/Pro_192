@@ -7,21 +7,15 @@ import DTO.Vase;
 import java.util.Scanner;
 public class AntiqueShop {
     public static void main(String[] args) {
+        String[] options = {"Create a Vase", "Create a Statue", "Create a Painting", "Display the Item"};
         Item item = null;
         int choice = 0;
-        Scanner sc = new Scanner(System.in);
-        do {            
-            System.out.println("1. Create a Vase:");
-            System.out.println("2. Create a Statue:");
-            System.out.println("3. Create a Painting:");
-            System.out.println("4. Display the Item:");
-            System.out.println("5. Exit");
-            System.out.println("Input a choice:");
-             choice=sc.nextInt();
-             switch (choice) {
+        do { 
+            choice = Menu.getChoice(options);
+            switch(choice){
                 case 1:
                     item = new Vase();
-                    ((Vase)item).input();
+                    ((Vase)item).inputVase();
                     break;
                 case 2:
                     item = new Statue();
@@ -33,19 +27,21 @@ public class AntiqueShop {
                     break;
                 case 4:
                     if(item != null){
-                       if(item instanceof Vase)
-                           ((Vase)item).output();
-                       else if (item instanceof Statue) 
-                           ((Statue)item).outputStatue();
-                       else if (item instanceof Painting)
-                           ((Painting)item).outputPainting();
-                       
+                        if(item instanceof Vase){
+                            ((Vase)item).outputVase();
+                        }
+                        else if(item instanceof Statue){
+                            ((Statue)item).outputStatue();
+                        }
+                        else if(item instanceof Painting){
+                            ((Painting)item).outputPainting();
+                        }
                     }
-                    else System.out.println("You need to create an object"); break;
-                case 5:
-                    System.out.println("----Exit----");
+                    break;
+                default:
                     break;
             }
-        } while (choice <5);
+        } while (choice > 0 && choice < 5);
     }
+
 }

@@ -30,7 +30,7 @@ public class Vase extends Item{
     public void setMaterial(String material) {
         this.material = material;
     }
-    public void input(){
+    public void inputVase(){
         super.input();
         Scanner sc=new Scanner(System.in);
         System.out.println("Input a height: ");
@@ -39,7 +39,7 @@ public class Vase extends Item{
         sc=new Scanner(System.in);
         material =sc.nextLine();
     }
-    public void output(){
+    public void outputVase(){
         super.output();
         System.out.println("Height: "+height);
         System.out.println("Material: "+material);
