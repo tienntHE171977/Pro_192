@@ -1,5 +1,5 @@
 
-package slot13;
+package employees;
 import java.lang.Comparable;
 
 public class Employee implements Comparable {

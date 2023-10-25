@@ -1,5 +1,5 @@
 
-package slot13;
+package employees;
 import java.util.Scanner;
 
 public class ManageProgram {
